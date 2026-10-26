@@ -3,162 +3,162 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/mladym-pravdu-2",
+      "source": "/mladym-pravdu-2{/}?",
       "destination": "/mladym-pravdu/",
       "permanent": true
     },
     {
-      "source": "/mladym-pravdu-3",
+      "source": "/mladym-pravdu-3{/}?",
       "destination": "/mladym-pravdu/",
       "permanent": true
     },
     {
-      "source": "/mladym-pravdu-2/strana-2",
+      "source": "/mladym-pravdu-2/strana-2{/}?",
       "destination": "/mladym-pravdu/",
       "permanent": true
     },
     {
-      "source": "/renata-ocilkova-2",
+      "source": "/renata-ocilkova-2{/}?",
       "destination": "/renata-ocilkova/",
       "permanent": true
     },
     {
-      "source": "/krizaidentity",
+      "source": "/krizaidentity{/}?",
       "destination": "/#kriza-identity",
       "permanent": true
     },
     {
-      "source": "/ucitelom-sk",
+      "source": "/ucitelom-sk{/}?",
       "destination": "/#ucitelom",
       "permanent": true
     },
     {
-      "source": "/nfr",
+      "source": "/nfr{/}?",
       "destination": "/#podcast",
       "permanent": true
     },
     {
-      "source": "/nfr-2",
+      "source": "/nfr-2{/}?",
       "destination": "/#podcast",
       "permanent": true
     },
     {
-      "source": "/fides-et-ratio",
+      "source": "/fides-et-ratio{/}?",
       "destination": "/#podcast",
       "permanent": true
     },
     {
-      "source": "/farnosti-a-spolocenstva",
+      "source": "/farnosti-a-spolocenstva{/}?",
       "destination": "/#kupit",
       "permanent": true
     },
     {
-      "source": "/doprava",
+      "source": "/doprava{/}?",
       "destination": "/#kupit",
       "permanent": true
     },
     {
-      "source": "/test1",
+      "source": "/test1{/}?",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/obchodne-podmienky",
+      "source": "/obchodne-podmienky{/}?",
       "destination": "https://www.luc.sk/obchodne-podmienky/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/podmienky-ochrany-osobnych-udajov",
+      "source": "/podmienky-ochrany-osobnych-udajov{/}?",
       "destination": "https://www.luc.sk/podmienky-ochrany-osobnych-udajov/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/max",
+      "source": "/max{/}?",
       "destination": "https://www.luc.sk/max--naprojektovany-chalan/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/frassati",
+      "source": "/frassati{/}?",
       "destination": "https://www.luc.sk/pier-giorgio-frassati/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/prvi-krestania",
+      "source": "/prvi-krestania{/}?",
       "destination": "https://www.luc.sk/prvi-krestania-komiks/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/prvi-krestania-nfr",
+      "source": "/prvi-krestania-nfr{/}?",
       "destination": "https://www.luc.sk/prvi-krestania-komiks/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/cesta-muza",
+      "source": "/cesta-muza{/}?",
       "destination": "https://www.luc.sk/cesta-muza/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/smerom-k-vysinam",
+      "source": "/smerom-k-vysinam{/}?",
       "destination": "https://www.luc.sk/smerom-k-vysinam-frassati/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/smerom-k-vysinam-nfr",
+      "source": "/smerom-k-vysinam-nfr{/}?",
       "destination": "https://www.luc.sk/smerom-k-vysinam-frassati/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/dni-jeho-zivota",
+      "source": "/dni-jeho-zivota{/}?",
       "destination": "https://www.luc.sk/obeta-darovaneho-zivota/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/homosexualita-nemusi-byt-osudom",
+      "source": "/homosexualita-nemusi-byt-osudom{/}?",
       "destination": "https://www.luc.sk/homosexualita-nemusi-byt-osud/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/skrytost-nepriehliadnutelneho-pier-giorgia",
+      "source": "/skrytost-nepriehliadnutelneho-pier-giorgia{/}?",
       "destination": "https://www.luc.sk/pier-giorgio-frassati/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/rozpravaj-mi-o-laske",
+      "source": "/rozpravaj-mi-o-laske{/}?",
       "destination": "https://www.luc.sk/rozpravaj-mi-o-laske/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/mami-kde-si-nfr",
+      "source": "/mami-kde-si-nfr{/}?",
       "destination": "https://www.luc.sk/mami--kde-si/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/zivot--ktory-nikdy-nevyhasol",
+      "source": "/zivot--ktory-nikdy-nevyhasol{/}?",
       "destination": "https://www.luc.sk/moj-brat-pier-giorgio/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/odrobinky-z-bozieho-stola-2026",
+      "source": "/odrobinky-z-bozieho-stola-2026{/}?",
       "destination": "https://www.luc.sk/odrobinky-z-bozieho-stola/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/moje-telo-je-moj-poklad",
+      "source": "/moje-telo-je-moj-poklad{/}?",
       "destination": "https://www.luc.sk/moje-telo-je-moj-poklad/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/pretoze-sme-sa-tak-rozhodli",
+      "source": "/pretoze-sme-sa-tak-rozhodli{/}?",
       "destination": "https://www.luc.sk/pretoze-sme-sa-tak-rozhodli/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/lev-xiv-necakany-nastupca-2",
+      "source": "/lev-xiv-necakany-nastupca-2{/}?",
       "destination": "https://www.luc.sk/lev-xiv-necakany-nastupca/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     },
     {
-      "source": "/farar--ktory-zostal-v-gaze",
+      "source": "/farar--ktory-zostal-v-gaze{/}?",
       "destination": "https://www.luc.sk/farar--ktory-zostal-v-gaze/?utm_source=web&utm_medium=social&utm_campaign=mp.sk",
       "permanent": true
     }
