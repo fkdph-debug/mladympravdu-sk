@@ -74,6 +74,15 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px s
 .nav li:first-child a{border-left:1px solid rgba(0,0,0,.14)}
 .nav a:hover{background:rgba(0,0,0,.1)}
 .head-actions{display:flex;align-items:center;gap:10px}
+.pod-banner{display:inline-flex;align-items:center;gap:10px;background:#2b2421;color:#fff;text-decoration:none;border-radius:999px;padding:6px 18px 6px 6px;font:500 .92rem/1 var(--sans);box-shadow:0 4px 14px rgba(43,36,33,.18);transition:transform .15s,box-shadow .15s}
+.pod-banner:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(43,36,33,.25)}
+.pb-new{background:var(--pink);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:999px;animation:pbPulse 2.4s ease-in-out infinite}
+.pb-play{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
+.pb-play svg{width:13px;height:13px;fill:#ff7a9a;margin-left:2px}
+.pb-sub{color:#cfc6bd;font-weight:400}
+.pb-short{display:none}
+@keyframes pbPulse{0%,100%{box-shadow:0 0 0 0 rgba(238,37,90,.55)}50%{box-shadow:0 0 0 6px rgba(238,37,90,0)}}
+@media (prefers-reduced-motion:reduce){.pb-new{animation:none}}
 .menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);color:var(--ink);cursor:pointer;place-items:center;padding:0}
 .menu-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
 .menu-btn .i-close{display:none}
@@ -272,7 +281,7 @@ blockquote footer b{color:var(--ink);display:block}
   .topbar{display:none}
   .head{padding-top:10px;padding-bottom:10px}
   .logo img{height:34px}
-  .head .btn{padding:.7em .95em;font-size:.9rem}
+  .pb-sub{display:none}
   .menu-btn{display:grid}
   .nav{display:none;border-top:1px solid rgba(0,0,0,.08)}
   .nav.open{display:block}
@@ -284,7 +293,9 @@ blockquote footer b{color:var(--ink);display:block}
   .cat-grid{grid-template-columns:1fr}
   .wrap{padding-left:16px;padding-right:16px}
   .nav li a,.nav li:first-child a{padding:14px 16px}
-  .head .btn .lbl-long{display:none}
+  .pb-long,.pb-play{display:none}
+  .pb-short{display:inline}
+  .pod-banner{padding:5px 14px 5px 5px;gap:8px;font-size:.88rem}
 }
 </style>
 </head>
@@ -301,9 +312,10 @@ blockquote footer b{color:var(--ink);display:block}
   <div class="wrap head">
     <a class="logo" href="#top" aria-label="Mladým pravdu – úvod"><img src="assets/logo.svg" alt="Mladým pravdu" width="212" height="44"></a>
     <div class="head-actions">
-      <a class="btn btn-green" href="#gen-z">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-        <span>Kúpiť<span class="lbl-long"> knihy</span></span>
+      <a class="pod-banner" href="#podcast" aria-label="Nové: videopodcast Na rovinu s Renátou Ocilkovou">
+        <span class="pb-new">Nové</span>
+        <span class="pb-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="pb-text"><span class="pb-long">Videopodcast</span><span class="pb-short">Podcast</span><span class="pb-sub"> Na rovinu s Renátou Ocilkovou</span></span>
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Menu">
         <svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
