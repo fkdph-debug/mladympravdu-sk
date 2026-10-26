@@ -222,6 +222,20 @@ blockquote footer b{color:var(--ink);display:block}
 .perk small{font-size:.82rem;opacity:.9}
 .perk small a{color:#fff}
 
+/* videá */
+.vplayer{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 2px 4px rgba(0,0,0,.06),0 14px 34px rgba(60,40,20,.14)}
+.vplayer button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer}
+.vplayer img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.vplayer button:hover img{transform:scale(1.03)}
+.vplayer video{display:block;width:100%;height:100%;background:#000}
+.genz-video{margin-top:28px}
+.nw{white-space:nowrap}
+.vcap{font-size:.85rem;color:var(--ink-soft);margin:10px 0 0}
+.promo-band{background:linear-gradient(135deg,#eef1fb 0%,#f5eefb 100%)}
+.promo-head{text-align:center;max-width:720px;margin:0 auto 32px}
+.promo-head p{color:var(--ink-soft);margin:0}
+.promo-video{max-width:900px;margin:0 auto}
+
 /* päta */
 .site-footer{background:var(--bg-2);padding:52px 0 28px;font-size:.92rem}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
@@ -389,7 +403,13 @@ blockquote footer b{color:var(--ink);display:block}
           <li>Sexualita</li><li>Identita</li><li>Hormonálne zmeny</li><li>Vzťahy</li><li>Hľadanie zmyslu</li>
         </ul>
         <a class="btn btn-green" href="https://www.luc.sk/na-rovinu--gen-z/?utm_source=web&amp;utm_medium=social&amp;utm_campaign=mp.sk&amp;utm_content=l1143" target="_blank" rel="noopener">Kúpiť knihu</a>
-        <p class="specs">49 strán · brožovaná väzba · ISBN 978-80-8179-270-0</p>
+        <p class="specs">49 strán · brožovaná väzba · <span class="nw">ISBN 978-80-8179-270-0</span></p>
+        <div class="vplayer genz-video" data-src="assets/video-genz.mp4">
+          <button type="button" aria-label="Prehrať video: Renáta Ocilková o knihe Na rovinu, Gen Z">
+            <img src="assets/video-genz.jpg" alt="Renáta Ocilková s knihou Na rovinu, Gen Z" width="1280" height="720" loading="lazy">
+          </button>
+        </div>
+        <p class="vcap">Renáta Ocilková predstavuje knihu Na rovinu, Gen Z</p>
       </div>
     </div>
   </section>
@@ -404,7 +424,7 @@ blockquote footer b{color:var(--ink);display:block}
           <p><strong>Príručka pre učiteľov, rodičov a sprievodcov mladých.</strong> Pútavým, ľudsky pravdivým a pritom taktným až láskavým spôsobom podáva širokú a bohatú škálu informácií adresovaných mladým.</p>
           <p>Sú to informácie nevyhnutné na to, aby mladí ľudia vedeli, ako v životnom spoločenstve muža a ženy dosiahnuť plný rozvoj duše, ducha i tela. Za 6 mesiacov sa kniha stala najpredávanejším titulom roka vo svojom vydavateľstve.</p>
           <a class="btn btn-green" href="https://www.luc.sk/mladym-pravdu-2/?utm_source=web&amp;utm_medium=social&amp;utm_campaign=mp.sk&amp;utm_content=l1109" target="_blank" rel="noopener">Kúpiť knihu</a>
-          <p class="specs">160 strán · brožovaná väzba · ISBN 978-80-8179-229-8</p>
+          <p class="specs">160 strán · brožovaná väzba · <span class="nw">ISBN 978-80-8179-229-8</span></p>
         </div>
         <div class="media">
           <figure class="cover" style="margin:0">
@@ -575,6 +595,22 @@ blockquote footer b{color:var(--ink);display:block}
     </div>
   </section>
 
+  <!-- IMIDŽOVÉ VIDEO -->
+  <section class="block promo-band" id="video">
+    <div class="wrap">
+      <div class="promo-head">
+        <span class="eyebrow">Video</span>
+        <h2>O tom všetkom – citlivo, láskavo, pravdivo, na rovinu</h2>
+        <p>Sex, potrat, pornografia… Témy, o ktorých sa s mladými treba rozprávať. Život je krásny – ži ho naplno.</p>
+      </div>
+      <div class="vplayer promo-video" data-src="assets/video-imidz.mp4">
+        <button type="button" aria-label="Prehrať imidžové video Mladým pravdu">
+          <img src="assets/video-imidz.jpg" alt="Imidžové video Mladým pravdu" width="1280" height="720" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- KRÍZA IDENTITY -->
   <section class="block" id="kriza-identity">
     <div class="wrap split even">
@@ -697,6 +733,15 @@ blockquote footer b{color:var(--ink);display:block}
 
 <script>
 (function(){
+  document.querySelectorAll('.vplayer').forEach(function(w){
+    var b=w.querySelector('button');
+    b.addEventListener('click',function(){
+      var v=document.createElement('video');
+      v.src=w.dataset.src; v.controls=true; v.autoplay=true; v.playsInline=true;
+      v.setAttribute('playsinline',''); v.poster=w.querySelector('img').getAttribute('src');
+      w.innerHTML=''; w.appendChild(v); var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});
+    });
+  });
   var mb=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
   if(mb&&nav){
     mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o?'true':'false');});
