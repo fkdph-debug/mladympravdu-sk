@@ -34,4 +34,4 @@ V administrácii Webglobe → doména `mladympravdu.sk` → **DNS záznamy**:
 
 ## Úpravy
 Texty sa menia priamo v `index.html`. Každý `git push` do hlavnej vetvy Vercel automaticky nasadí.
-Obálky kníh sa načítavajú z CDN luc.sk; odkazy na tituly vedú na luc.sk.
+Tlačidlá „Kúpiť knihu“ vedú do e-shopu vydavateľa; na stránke sa vydavateľ nespomína.
