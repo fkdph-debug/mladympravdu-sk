@@ -77,8 +77,7 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px s
 .pod-banner{display:inline-flex;align-items:center;gap:10px;background:#2b2421;color:#fff;text-decoration:none;border-radius:999px;padding:6px 18px 6px 6px;font:500 .92rem/1 var(--sans);box-shadow:0 4px 14px rgba(43,36,33,.18);transition:transform .15s,box-shadow .15s}
 .pod-banner:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(43,36,33,.25)}
 .pb-new{background:var(--pink);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:999px;animation:pbPulse 2.4s ease-in-out infinite}
-.pb-play{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
-.pb-play svg{width:13px;height:13px;fill:#ff7a9a;margin-left:2px}
+.pb-play{font-size:1.15rem;line-height:1;flex:none}
 .pb-sub{color:#cfc6bd;font-weight:400}
 .pb-short{display:none}
 @keyframes pbPulse{0%,100%{box-shadow:0 0 0 0 rgba(238,37,90,.55)}50%{box-shadow:0 0 0 6px rgba(238,37,90,0)}}
@@ -293,10 +292,12 @@ blockquote footer b{color:var(--ink);display:block}
   .cat-grid{grid-template-columns:1fr}
   .wrap{padding-left:16px;padding-right:16px}
   .nav li a,.nav li:first-child a{padding:14px 16px}
-  .pb-long,.pb-play{display:none}
+  .pb-long{display:none}
+  .pod-banner .pb-play{font-size:1.05rem}
   .pb-short{display:inline}
-  .pod-banner{padding:5px 14px 5px 5px;gap:8px;font-size:.88rem}
+  .pod-banner{padding:5px 12px 5px 5px;gap:6px;font-size:.88rem}
 }
+@media (max-width:370px){.pod-banner .pb-play{display:none}}
 </style>
 </head>
 <body>
@@ -314,7 +315,7 @@ blockquote footer b{color:var(--ink);display:block}
     <div class="head-actions">
       <a class="pod-banner" href="#podcast" aria-label="Nové: videopodcast Na rovinu s Renátou Ocilkovou">
         <span class="pb-new">Nové</span>
-        <span class="pb-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="pb-play" aria-hidden="true">🎥</span>
         <span class="pb-text"><span class="pb-long">Videopodcast</span><span class="pb-short">Podcast</span><span class="pb-sub"> Na rovinu s Renátou Ocilkovou</span></span>
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Menu">
