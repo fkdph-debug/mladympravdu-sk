@@ -203,6 +203,18 @@ blockquote footer b{color:var(--ink);display:block}
 .gift .btn-white{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.15)}
 .gift .btn-white:hover{background:var(--bg)}
 
+.perks{grid-column:1/-1;display:grid;grid-template-columns:1fr 2fr;gap:14px;margin-top:6px}
+.perk{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:16px 18px;backdrop-filter:blur(2px)}
+.perk-ico{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;color:#c9372c;display:grid;place-items:center}
+.perk-ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.perk b{display:block;font-family:var(--serif);font-size:1.05rem}
+.perk span{font-size:.9rem;opacity:.92}
+.tiers{list-style:none;padding:0;margin:10px 0 8px;display:flex;flex-wrap:wrap;gap:8px}
+.tiers li{background:#fff;color:#7a2a22;border-radius:6px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.tiers em{font-style:normal;font-weight:500;color:var(--ink-soft);margin-right:6px;font-size:.85rem}
+.perk small{font-size:.82rem;opacity:.9}
+.perk small a{color:#fff}
+
 /* päta */
 .site-footer{background:var(--bg-2);padding:52px 0 28px;font-size:.92rem}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
@@ -228,6 +240,7 @@ blockquote footer b{color:var(--ink);display:block}
   .author-photo{max-width:300px;margin:0 auto}
   section.block{padding:56px 0}
   .gift-inner{grid-template-columns:1fr;padding:104px 22px 28px 74px}
+  .perks{grid-template-columns:1fr}
   .ribbon-v{left:30px;width:26px}
   .bow{left:-17px;width:120px;height:68px;top:-22px}
   .gift-tag{right:12px}
@@ -616,6 +629,19 @@ blockquote footer b{color:var(--ink);display:block}
           <div class="actions">
             <a class="btn btn-white" href="https://www.luc.sk/na-rovinu--gen-z/" target="_blank" rel="noopener">Na rovinu, Gen Z</a>
             <a class="btn btn-white" href="https://www.luc.sk/mladym-pravdu-2/" target="_blank" rel="noopener">Mladým pravdu</a>
+          </div>
+          <div class="perks">
+            <div class="perk">
+              <span class="perk-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+              <div><b>Dodanie zdarma</b><span>pri objednávke nad 25&nbsp;€</span></div>
+            </div>
+            <div class="perk perk-wide">
+              <span class="perk-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span>
+              <div><b>Množstevné zľavy</b><span>pre školy, farnosti a spoločenstvá</span>
+                <ul class="tiers"><li><em>10–49 ks</em>−21&nbsp;%</li><li><em>50–99 ks</em>−32&nbsp;%</li><li><em>100+ ks</em>−43&nbsp;%</li></ul>
+                <small>Väčšie objednávky: <a href="mailto:info@ucitelom.sk">info@ucitelom.sk</a></small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
