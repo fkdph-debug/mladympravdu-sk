@@ -243,6 +243,13 @@ blockquote footer b{color:var(--ink);display:block}
 .promo-head{text-align:center;max-width:720px;margin:0 auto 32px}
 .promo-head p{color:var(--ink-soft);margin:0}
 .promo-video{max-width:900px;margin:0 auto}
+.support{display:flex;align-items:center;justify-content:center;gap:18px;max-width:900px;margin:36px auto 0}
+.support-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(36,36,36,.18))}
+.support-line:last-child{background:linear-gradient(90deg,rgba(36,36,36,.18),transparent)}
+.support-text{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+.support-logo{display:block;flex:none;opacity:.92;transition:opacity .2s}
+.support-logo:hover{opacity:1}
+.support-logo img{height:40px;width:auto}
 
 /* päta */
 .site-footer{background:var(--bg-2);padding:52px 0 28px;font-size:.92rem}
@@ -281,6 +288,8 @@ blockquote footer b{color:var(--ink);display:block}
   .head{padding-top:10px;padding-bottom:10px}
   .logo img{height:34px}
   .pb-sub{display:none}
+  .support{flex-wrap:wrap;gap:10px 14px}
+  .support-line{display:none}
   .menu-btn{display:grid}
   .nav{display:none;border-top:1px solid rgba(0,0,0,.08)}
   .nav.open{display:block}
@@ -620,6 +629,14 @@ blockquote footer b{color:var(--ink);display:block}
         <button type="button" aria-label="Prehrať imidžové video Mladým pravdu">
           <img src="assets/video-imidz.jpg" alt="Imidžové video Mladým pravdu" width="1280" height="720" loading="lazy">
         </button>
+      </div>
+      <div class="support">
+        <span class="support-line" aria-hidden="true"></span>
+        <span class="support-text">Projekt je realizovaný s&nbsp;podporou</span>
+        <a class="support-logo" href="https://www.nfr.sk/" target="_blank" rel="noopener" aria-label="Nadácia Fides et Ratio">
+          <img src="assets/fides-et-ratio.svg" alt="Nadácia Fides et Ratio" width="335" height="89" loading="lazy">
+        </a>
+        <span class="support-line" aria-hidden="true"></span>
       </div>
     </div>
   </section>
