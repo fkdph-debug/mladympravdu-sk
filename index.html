@@ -11,7 +11,10 @@
 <meta property="og:url" content="https://www.mladympravdu.sk/">
 <meta property="og:image" content="https://cdn.myshoptet.com/usr/www.luc.sk/user/shop/big/5063_na-rovinu--gen-z.jpg?6a87434c">
 <meta name="theme-color" content="#f5f3ef">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -138,14 +141,67 @@ blockquote footer b{color:var(--ink);display:block}
 
 /* záverečná výzva */
 .cta{padding:72px 0}
-.cta .box{background:var(--nav);color:#fff;border-radius:var(--radius);padding:44px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-.cta h2{margin-bottom:.3em}
-.cta p{margin:0;opacity:.92}
-.cta .actions{display:flex;flex-wrap:wrap;gap:12px}
-.cta .btn-white{background:#fff;color:var(--ink)}
-.cta .btn-white:hover{background:var(--bg)}
-.cta .btn-line{border-color:#fff;color:#fff}
-.cta .btn-line:hover{background:rgba(255,255,255,.12)}
+
+
+/* hero – dve knihy */
+.hero-books{position:relative;height:440px;max-width:380px;width:100%;margin-left:auto}
+.hb{position:absolute;width:62%;background:var(--card);padding:12px 12px 10px;border-radius:var(--radius);box-shadow:0 2px 4px rgba(0,0,0,.06),0 16px 36px rgba(60,40,20,.14);text-decoration:none;transition:transform .2s}
+.hb img{border-radius:2px;aspect-ratio:1024/1365;object-fit:cover;width:100%;background:#eee}
+.hb span{display:block;text-align:center;font-size:.82rem;color:var(--ink-soft);margin-top:8px}
+.hb-back{left:0;top:30px;transform:rotate(-6deg)}
+.hb-front{right:0;top:0;transform:rotate(4deg);z-index:2}
+.hb:hover{transform:rotate(0) translateY(-4px);z-index:3}
+
+/* videopodcast */
+.podcast{background:#2b2421;color:#f3eee8;padding:72px 0}
+.podcast .eyebrow{color:#ff7a9a}
+.podcast h2{color:#fff}
+.pod-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+.pod-head p{color:#cfc6bd;max-width:40em;margin:0}
+.pod-nav{display:flex;gap:10px;flex:none}
+.pod-arrow{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center}
+.pod-arrow:hover{background:rgba(255,255,255,.1)}
+.pod-arrow svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.pod-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*18px)/4);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent}
+.ep{scroll-snap-align:start;background:#3a312d;border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.ep-thumb{position:relative;display:block;padding:0;border:0;background:#000;cursor:pointer;aspect-ratio:16/9;overflow:hidden;width:100%}
+.ep-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s,opacity .3s;opacity:.92}
+.ep-thumb:hover img{transform:scale(1.04);opacity:1}
+.ep-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ep-play{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--pink);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.ep-play svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+.ep-dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.75);color:#fff;font-size:.75rem;padding:2px 6px;border-radius:3px}
+.ep-body{padding:14px 16px 16px}
+.ep-no{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#ff7a9a}
+.ep h3{font-size:1rem;margin:6px 0 6px;line-height:1.3}
+.ep h3 a{text-decoration:none;color:#fff}
+.ep h3 a:hover{text-decoration:underline}
+.ep p{font-size:.85rem;color:#cfc6bd;margin:0}
+.pod-more{margin:22px 0 0;font-size:.95rem;color:#cfc6bd}
+.pod-more a{color:#fff}
+
+/* darček */
+.gift{position:relative;margin-top:46px;border-radius:10px;color:#fff;
+  background-color:#3f8f77;
+  background-image:radial-gradient(rgba(255,255,255,.16) 2px,transparent 2.5px),radial-gradient(rgba(255,255,255,.10) 1.5px,transparent 2px);
+  background-size:34px 34px,34px 34px;background-position:0 0,17px 17px;
+  box-shadow:0 2px 0 rgba(0,0,0,.08),0 18px 40px rgba(40,70,60,.25)}
+.ribbon-v,.ribbon-h{position:absolute;background:linear-gradient(90deg,#c9372c,#e2493d 45%,#c9372c);pointer-events:none}
+.ribbon-v{top:0;bottom:0;left:88px;width:34px;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+.ribbon-h{left:0;right:0;top:58px;height:30px;background:linear-gradient(180deg,#c9372c,#e2493d 45%,#c9372c);box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+.bow{position:absolute;left:25px;top:-30px;width:160px;height:90px;z-index:2;filter:drop-shadow(0 3px 3px rgba(0,0,0,.25))}
+.bow-loop{fill:#e2493d}
+.bow-shade{fill:#a92a21;opacity:.55}
+.bow-tail{fill:#c9372c}
+.bow-knot{fill:#b8312a}
+.gift-tag{position:absolute;right:28px;top:-16px;background:#fff8ec;color:#7a2a22;font:600 .85rem/1 var(--serif);padding:10px 16px 10px 26px;border-radius:4px 14px 14px 4px;transform:rotate(4deg);box-shadow:0 4px 10px rgba(0,0,0,.18);z-index:2}
+.gift-tag::before{content:"";position:absolute;left:9px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:#3f8f77;box-shadow:inset 0 0 0 2px #fff8ec}
+.gift-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:112px 44px 44px 160px}
+.gift h2{color:#fff;margin-bottom:.3em;text-shadow:0 1px 2px rgba(0,0,0,.15)}
+.gift p{margin:0;opacity:.95}
+.gift .actions{display:flex;flex-wrap:wrap;gap:12px}
+.gift .btn-white{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.gift .btn-white:hover{background:var(--bg)}
 
 /* päta */
 .site-footer{background:var(--bg-2);padding:52px 0 28px;font-size:.92rem}
@@ -159,6 +215,7 @@ blockquote footer b{color:var(--ink);display:block}
 .copy{border-top:1px solid #d6d0c4;margin-top:36px;padding-top:18px;color:var(--ink-soft);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 @media (max-width:980px){
+  .pod-track{grid-auto-columns:calc((100% - 18px)/2)}
   .cat-grid{grid-template-columns:repeat(2,1fr)}
   .quotes{grid-template-columns:1fr}
 }
@@ -170,7 +227,13 @@ blockquote footer b{color:var(--ink);display:block}
   .hero .cover,.media .cover{max-width:300px;margin:0 auto}
   .author-photo{max-width:300px;margin:0 auto}
   section.block{padding:56px 0}
-  .cta .box{grid-template-columns:1fr;padding:30px}
+  .gift-inner{grid-template-columns:1fr;padding:104px 22px 28px 74px}
+  .ribbon-v{left:30px;width:26px}
+  .bow{left:-17px;width:120px;height:68px;top:-22px}
+  .gift-tag{right:12px}
+  .pod-track{grid-auto-columns:78%}
+  .pod-nav{display:none}
+  .hero-books{height:360px;max-width:300px;margin:0 auto}
   .foot{grid-template-columns:1fr}
   .head .btn{display:none}
   .logo img{height:36px}
@@ -224,19 +287,24 @@ blockquote footer b{color:var(--ink);display:block}
         <span class="eyebrow">Dielo Renáty Ocilkovej</span>
         <h1>Mladým pravdu</h1>
         <p class="lead">Pravdivo, zrozumiteľne a s láskou o identite, vzťahoch a sexualite – pre mladých ľudí, ich rodičov, učiteľov a duchovných sprievodcov.</p>
-        <p>Mladí si dnes kladú otázky, kto sú, ako budovať vzťahy a čo so svojou sexualitou. Často pritom narážajú na povrchné či zavádzajúce odpovede. <strong>Mladým pravdu</strong> im ponúka vedecky podložené, ľudsky pravdivé a taktné informácie, aby mohli dospievať k zdravej, stabilnej a zrelej osobnosti.</p>
+        <p>Mladí si dnes kladú otázky, kto sú, ako budovať vzťahy a čo so svojou sexualitou. Často pritom narážajú na povrchné či zavádzajúce odpovede. Projekt <strong>mladympravdu.sk</strong> im ponúka vedecky podložené, ľudsky pravdivé a taktné informácie, aby mohli dospievať k zdravej, stabilnej a zrelej osobnosti.</p>
+        <p>Patria k nemu dve knihy: <a href="#gen-z"><strong>Na rovinu, Gen&nbsp;Z</strong></a> priamo pre mladých a <a href="#mladym-pravdu"><strong>Mladým pravdu</strong></a> pre učiteľov, rodičov a sprievodcov.</p>
         <div class="actions">
           <a class="btn btn-green" href="#gen-z">Pre mladých: Na rovinu, Gen Z</a>
           <a class="btn btn-ghost" href="#mladym-pravdu">Pre dospelých: Mladým pravdu</a>
         </div>
         <p class="motto">Sexualita nie je centrom života. Dôležité sú osoby a vzťahy.</p>
       </div>
-      <figure class="cover" style="margin:0">
-        <a href="#gen-z">
-          <img src="https://cdn.myshoptet.com/usr/www.luc.sk/user/shop/big/5063_na-rovinu--gen-z.jpg?6a87434c" alt="Obálka knihy Na rovinu, Gen Z" width="1024" height="1365">
+      <div class="hero-books">
+        <a class="hb hb-back" href="#mladym-pravdu" aria-label="Kniha Mladým pravdu">
+          <img src="https://cdn.myshoptet.com/usr/www.luc.sk/user/shop/big/5078_mladym-pravdu.jpg?6a874349" alt="Obálka knihy Mladým pravdu" width="1024" height="1365">
+          <span>Mladým pravdu</span>
         </a>
-        <figcaption>Nová kniha pre mladých: Na rovinu, Gen Z</figcaption>
-      </figure>
+        <a class="hb hb-front" href="#gen-z" aria-label="Kniha Na rovinu, Gen Z">
+          <img src="https://cdn.myshoptet.com/usr/www.luc.sk/user/shop/big/5063_na-rovinu--gen-z.jpg?6a87434c" alt="Obálka knihy Na rovinu, Gen Z" width="1024" height="1365">
+          <span>Na rovinu, Gen Z</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -335,6 +403,122 @@ blockquote footer b{color:var(--ink);display:block}
     </div>
   </section>
 
+  <!-- VIDEOPODCAST -->
+  <section class="podcast" id="podcast">
+    <div class="wrap">
+      <div class="pod-head">
+        <div>
+          <span class="eyebrow">Videopodcast</span>
+          <h2>Na rovinu s Renátou Ocilkovou</h2>
+          <p>Rozhovory s odborníkmi a hosťami o rodine, výchove, identite a vzťahoch. Podcast vydáva Nadácia Fides et Ratio.</p>
+        </div>
+        <div class="pod-nav">
+          <button type="button" class="pod-arrow" data-dir="-1" aria-label="Predchádzajúce diely"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="pod-arrow" data-dir="1" aria-label="Ďalšie diely"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="pod-track" id="podTrack">
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="P-ZoqQAgjKI" aria-label="Prehrať: Tranzícia mi problémy nevyriešila">
+            <img src="https://i.ytimg.com/vi/P-ZoqQAgjKI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">50:03</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">8. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=P-ZoqQAgjKI" target="_blank" rel="noopener">Tranzícia mi problémy nevyriešila</a></h3>
+            <p>Hostia: Daniel a Tereza Black</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="Z6yl3HMZofk" aria-label="Prehrať: Šikana nie je konflikt: Ako ju včas rozpoznať">
+            <img src="https://i.ytimg.com/vi/Z6yl3HMZofk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">48:09</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">7. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=Z6yl3HMZofk" target="_blank" rel="noopener">Šikana nie je konflikt: Ako ju včas rozpoznať</a></h3>
+            <p>Hosť: Mária Dědová</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="OTwB9He3O9k" aria-label="Prehrať: Keď internet nahradí priateľov">
+            <img src="https://i.ytimg.com/vi/OTwB9He3O9k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">47:30</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">6. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=OTwB9He3O9k" target="_blank" rel="noopener">Keď internet nahradí priateľov</a></h3>
+            <p>Hosť: Andrea Mikolášiková</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="6PuWAsiP1eU" aria-label="Prehrať: Chlapcami sa rodíme, mužmi sa stávame">
+            <img src="https://i.ytimg.com/vi/6PuWAsiP1eU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">1:00:07</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">5. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=6PuWAsiP1eU" target="_blank" rel="noopener">Chlapcami sa rodíme, mužmi sa stávame</a></h3>
+            <p>Hosť: o. Juraj Sedláček</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="HdLWFNbOaOM" aria-label="Prehrať: Ako sa mení pohľad na muža a ženu v 21. storočí?">
+            <img src="https://i.ytimg.com/vi/HdLWFNbOaOM/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">1:05:51</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">4. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=HdLWFNbOaOM" target="_blank" rel="noopener">Ako sa mení pohľad na muža a ženu v 21. storočí?</a></h3>
+            <p>Hosť: MUDr. Miroslav Mikolášik</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="Dpz0X211mho" aria-label="Prehrať: Prečo rovnaká výchova nezaručuje rovnaký výsledok?">
+            <img src="https://i.ytimg.com/vi/Dpz0X211mho/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">1:01:55</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">3. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=Dpz0X211mho" target="_blank" rel="noopener">Prečo rovnaká výchova nezaručuje rovnaký výsledok?</a></h3>
+            <p>Hosť: Mgr. Mário Schwarz, PhD. (II. časť)</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="NUW3EdnZLEU" aria-label="Prehrať: Čo ak v rodine niečo nefunguje?">
+            <img src="https://i.ytimg.com/vi/NUW3EdnZLEU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">48:07</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">2. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=NUW3EdnZLEU" target="_blank" rel="noopener">Čo ak v rodine niečo nefunguje?</a></h3>
+            <p>Hosť: PhDr. Katka Hatráková</p>
+          </div>
+        </article>
+        <article class="ep">
+          <button class="ep-thumb" type="button" data-id="djfl1eo8OBw" aria-label="Prehrať: Rodičovstvo bez stresu">
+            <img src="https://i.ytimg.com/vi/djfl1eo8OBw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ep-dur">50:07</span>
+          </button>
+          <div class="ep-body">
+            <span class="ep-no">1. diel</span>
+            <h3><a href="https://www.youtube.com/watch?v=djfl1eo8OBw" target="_blank" rel="noopener">Rodičovstvo bez stresu</a></h3>
+            <p>Hosť: Mgr. Mário Schwarz, PhD. (I. časť)</p>
+          </div>
+        </article>
+      </div>
+      <p class="pod-more"><a href="https://www.youtube.com/playlist?list=PL8srd4Txr2qZgCdyseypqv64UzoEX8dnK" target="_blank" rel="noopener">Celý podcast na YouTube →</a> · <a href="https://www.youtube.com/@nadaciaFR" target="_blank" rel="noopener">Kanál Nadácie Fides et Ratio</a></p>
+    </div>
+  </section>
+
   <!-- AUTOR -->
   <section class="block alt" id="autor">
     <div class="wrap split rev">
@@ -408,17 +592,31 @@ blockquote footer b{color:var(--ink);display:block}
     </div>
   </section>
 
-  <!-- VÝZVA -->
+  <!-- VÝZVA – darček -->
   <section class="cta">
     <div class="wrap">
-      <div class="box">
-        <div>
-          <h2>Knihy Renáty Ocilkovej</h2>
-          <p>Pre mladých aj pre tých, ktorí ich sprevádzajú.</p>
-        </div>
-        <div class="actions">
-          <a class="btn btn-white" href="https://www.luc.sk/na-rovinu--gen-z/" target="_blank" rel="noopener">Na rovinu, Gen Z</a>
-          <a class="btn btn-line" href="https://www.luc.sk/mladym-pravdu-2/" target="_blank" rel="noopener">Mladým pravdu</a>
+      <div class="gift">
+        <span class="ribbon-v" aria-hidden="true"></span>
+        <span class="ribbon-h" aria-hidden="true"></span>
+        <svg class="bow" viewBox="0 0 160 90" aria-hidden="true">
+          <path class="bow-tail" d="M74 52 L52 88 L62 84 L66 92 L80 58 Z"/>
+          <path class="bow-tail" d="M86 52 L108 88 L98 84 L94 92 L80 58 Z"/>
+          <path class="bow-loop" d="M80 48 C60 10, 10 6, 14 34 C17 56, 52 58, 80 48 Z"/>
+          <path class="bow-loop" d="M80 48 C100 10, 150 6, 146 34 C143 56, 108 58, 80 48 Z"/>
+          <path class="bow-shade" d="M80 48 C62 30, 32 24, 26 34 C40 40, 60 46, 80 48 Z"/>
+          <path class="bow-shade" d="M80 48 C98 30, 128 24, 134 34 C120 40, 100 46, 80 48 Z"/>
+          <ellipse class="bow-knot" cx="80" cy="48" rx="12" ry="10"/>
+        </svg>
+        <div class="gift-tag" aria-hidden="true">Tip na Vianoce</div>
+        <div class="gift-inner">
+          <div>
+            <h2>Darujte pravdu pod stromček</h2>
+            <p>Knihy Renáty Ocilkovej – pre mladých aj pre tých, ktorí ich sprevádzajú.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-white" href="https://www.luc.sk/na-rovinu--gen-z/" target="_blank" rel="noopener">Na rovinu, Gen Z</a>
+            <a class="btn btn-white" href="https://www.luc.sk/mladym-pravdu-2/" target="_blank" rel="noopener">Mladým pravdu</a>
+          </div>
         </div>
       </div>
     </div>
@@ -456,5 +654,27 @@ blockquote footer b{color:var(--ink);display:block}
   </div>
 </footer>
 
+<script>
+(function(){
+  var track=document.getElementById('podTrack');
+  document.querySelectorAll('.pod-arrow').forEach(function(b){
+    b.addEventListener('click',function(){
+      var card=track.querySelector('.ep'); var step=card?card.getBoundingClientRect().width+18:300;
+      track.scrollBy({left:step*Number(b.dataset.dir),behavior:'smooth'});
+    });
+  });
+  document.querySelectorAll('.ep-thumb').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(btn.querySelector('iframe')) return;
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+btn.dataset.id+'?autoplay=1&rel=0';
+      f.title=btn.getAttribute('aria-label');
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen=true;
+      btn.innerHTML=''; btn.appendChild(f); btn.style.cursor='default';
+    });
+  });
+})();
+</script>
 </body>
 </html>
