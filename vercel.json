@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/na-rovinu-gen-z", "destination": "https://www.luc.sk/na-rovinu--gen-z/", "permanent": true },
+    { "source": "/mladym-pravdu", "destination": "https://www.luc.sk/mladym-pravdu-2/", "permanent": true },
+    { "source": "/mladym-pravdu-2", "destination": "https://www.luc.sk/mladym-pravdu-2/", "permanent": true },
+    { "source": "/renata-ocilkova", "destination": "/#autor", "permanent": true },
+    { "source": "/krizaidentity", "destination": "/#kriza-identity", "permanent": true },
+    { "source": "/ucitelom-sk", "destination": "/#ucitelom", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}
