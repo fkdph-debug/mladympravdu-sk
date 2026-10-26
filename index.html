@@ -73,6 +73,12 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px s
 .nav a{display:block;padding:14px 22px;color:#fff;text-decoration:none;font-weight:500;border-right:1px solid rgba(0,0,0,.14);white-space:nowrap}
 .nav li:first-child a{border-left:1px solid rgba(0,0,0,.14)}
 .nav a:hover{background:rgba(0,0,0,.1)}
+.head-actions{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);color:var(--ink);cursor:pointer;place-items:center;padding:0}
+.menu-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.menu-btn .i-close{display:none}
+.menu-btn[aria-expanded="true"] .i-open{display:none}
+.menu-btn[aria-expanded="true"] .i-close{display:block}
 
 /* hero */
 .hero{padding:64px 0 72px}
@@ -233,7 +239,7 @@ blockquote footer b{color:var(--ink);display:block}
   .quotes{grid-template-columns:1fr}
 }
 @media (max-width:780px){
-  html{scroll-padding-top:150px}
+  html{scroll-padding-top:76px}
   .hero{padding:40px 0 56px}
   .hero .wrap,.split,.split.rev,.split.even{grid-template-columns:1fr;gap:32px}
   .split.rev .media{order:0}
@@ -249,19 +255,22 @@ blockquote footer b{color:var(--ink);display:block}
   .pod-nav{display:none}
   .hero-books{height:360px;max-width:300px;margin:0 auto}
   .foot{grid-template-columns:1fr}
-  .head .btn{display:none}
-  .logo img{height:36px}
-  .topbar .hide-m{display:none}
+  .topbar{display:none}
+  .head{padding-top:10px;padding-bottom:10px}
+  .logo img{height:34px}
+  .head .btn{padding:.7em .95em;font-size:.9rem}
+  .menu-btn{display:grid}
+  .nav{display:none;border-top:1px solid rgba(0,0,0,.08)}
+  .nav.open{display:block}
+  .nav ul{display:block;padding:4px 0 8px}
+  .nav li a,.nav li:first-child a{border:0;border-bottom:1px solid rgba(255,255,255,.14);padding:14px 20px;font-size:1.02rem}
+  .nav li:last-child a{border-bottom:0}
 }
 @media (max-width:480px){
-  header{position:static}
-  html{scroll-padding-top:12px}
   .cat-grid{grid-template-columns:1fr}
-  .wrap{padding:0 16px}
-  .nav ul{padding:0 16px}
-  .nav ul{display:grid;grid-template-columns:1fr 1fr;padding:0}
-  .nav li a,.nav li:first-child a{border:0;border-bottom:1px solid rgba(0,0,0,.14);text-align:center;padding:11px 8px}
-  .nav li:nth-child(odd) a{border-right:1px solid rgba(0,0,0,.14)}
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav li a,.nav li:first-child a{padding:14px 16px}
+  .head .btn .lbl-long{display:none}
 }
 </style>
 </head>
@@ -277,12 +286,18 @@ blockquote footer b{color:var(--ink);display:block}
 <header>
   <div class="wrap head">
     <a class="logo" href="#top" aria-label="Mladým pravdu – úvod"><img src="assets/logo.svg" alt="Mladým pravdu" width="212" height="44"></a>
-    <a class="btn btn-green" href="#gen-z">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-      Kúpiť knihy
-    </a>
+    <div class="head-actions">
+      <a class="btn btn-green" href="#gen-z">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span>Kúpiť<span class="lbl-long"> knihy</span></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Menu">
+        <svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
   </div>
-  <nav class="nav" aria-label="Hlavné menu">
+  <nav class="nav" id="mainnav" aria-label="Hlavné menu">
     <ul>
       <li><a href="#gen-z">Na rovinu, Gen Z</a></li>
       <li><a href="#autor">Autor</a></li>
@@ -682,6 +697,11 @@ blockquote footer b{color:var(--ink);display:block}
 
 <script>
 (function(){
+  var mb=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
+  if(mb&&nav){
+    mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o?'true':'false');});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded','false');});});
+  }
   var track=document.getElementById('podTrack');
   document.querySelectorAll('.pod-arrow').forEach(function(b){
     b.addEventListener('click',function(){
