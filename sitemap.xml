@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://www.mladympravdu.sk/</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <video:video><video:thumbnail_loc>https://www.mladympravdu.sk/assets/video-imidz.jpg</video:thumbnail_loc><video:title>Mladým pravdu – imidžové video</video:title><video:description>O tom všetkom – citlivo, láskavo, pravdivo, na rovinu.</video:description><video:content_loc>https://www.mladympravdu.sk/assets/video-imidz.mp4</video:content_loc><video:duration>30</video:duration></video:video>
+  </url>
+  <url><loc>https://www.mladympravdu.sk/na-rovinu-gen-z/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <video:video><video:thumbnail_loc>https://www.mladympravdu.sk/assets/video-genz.jpg</video:thumbnail_loc><video:title>Renáta Ocilková predstavuje knihu Na rovinu, Gen Z</video:title><video:description>Autorka Renáta Ocilková o knihe Na rovinu, Gen Z.</video:description><video:content_loc>https://www.mladympravdu.sk/assets/video-genz.mp4</video:content_loc><video:duration>25</video:duration></video:video>
+  </url>
+  <url><loc>https://www.mladympravdu.sk/mladym-pravdu/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.mladympravdu.sk/renata-ocilkova/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
