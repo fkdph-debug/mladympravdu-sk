@@ -2,9 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/na-rovinu-gen-z", "destination": "https://www.luc.sk/na-rovinu--gen-z/", "permanent": true },
-    { "source": "/mladym-pravdu", "destination": "https://www.luc.sk/mladym-pravdu-2/", "permanent": true },
-    { "source": "/mladym-pravdu-2", "destination": "https://www.luc.sk/mladym-pravdu-2/", "permanent": true },
+    { "source": "/na-rovinu-gen-z", "destination": "https://www.luc.sk/na-rovinu--gen-z/?utm_source=web&utm_medium=social&utm_campaign=mp.sk&utm_content=l1143", "permanent": true },
+    { "source": "/mladym-pravdu", "destination": "https://www.luc.sk/mladym-pravdu-2/?utm_source=web&utm_medium=social&utm_campaign=mp.sk&utm_content=l1109", "permanent": true },
+    { "source": "/mladym-pravdu-2", "destination": "https://www.luc.sk/mladym-pravdu-2/?utm_source=web&utm_medium=social&utm_campaign=mp.sk&utm_content=l1109", "permanent": true },
     { "source": "/renata-ocilkova", "destination": "/#autor", "permanent": true },
     { "source": "/krizaidentity", "destination": "/#kriza-identity", "permanent": true },
     { "source": "/ucitelom-sk", "destination": "/#ucitelom", "permanent": true }
