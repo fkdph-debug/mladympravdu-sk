@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://www.mladympravdu.sk/</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
     <video:video><video:thumbnail_loc>https://www.mladympravdu.sk/assets/video-imidz.jpg</video:thumbnail_loc><video:title>Mladým pravdu – imidžové video</video:title><video:description>O tom všetkom – citlivo, láskavo, pravdivo, na rovinu.</video:description><video:content_loc>https://www.mladympravdu.sk/assets/video-imidz.mp4</video:content_loc><video:duration>30</video:duration></video:video>
   </url>
